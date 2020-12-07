@@ -13,28 +13,28 @@ export default function Languages() {
                 <div className="cards">
                     <div className="card">
                         <div className="icon">
-                            <img src={javaIcon} alt="Java icon"/>
+                            <img src={javaIcon} alt="Java icon" className="svg-icon"/>
                             <h3>Java</h3>
                         </div>
                         <p className="java-blurb">For responsive mobile applications</p>
                     </div>
                     <div className="card">
                         <div className="icon">
-                            <img src={javascriptIcon} alt="Javascript icon"/>
+                            <img src={javascriptIcon} alt="Javascript icon" className="svg-icon"/>
                             <h3>Javascript</h3>
                         </div>
                         <p className="javascript-blurb">The webs most used programming language</p>
                     </div>
                     <div className="card">
                         <div className="icon">
-                            <img src={pythonIcon} alt="python icon"/>
+                            <img src={pythonIcon} alt="python icon" className="svg-icon"/>
                             <h3>Python</h3>
                         </div>
                         <p className="python-blurb">The worlds most versatile language</p>
                     </div>
                     <div className="card">
                         <div className="icon">
-                            <img src={reactIcon} alt="React icon"/>
+                            <img src={reactIcon} alt="React icon" className="svg-icon"/>
                             <h3>React.js</h3>
                         </div>
                         <p className="React-blurb">The most used framework for Javascript</p>
