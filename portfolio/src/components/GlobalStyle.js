@@ -1,5 +1,6 @@
 import {createGlobalStyle} from 'styled-components'
 
+
 const GlobalStyle = createGlobalStyle`
 *{
     margin: 0;
@@ -43,6 +44,7 @@ h2{
     h4{
         font-weight: bold;
         color: #00D261;
+        font-size: 2rem;
     }
 span{
     font-weight: bold;

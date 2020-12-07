@@ -11,6 +11,9 @@ import {About, Description, Image, Hide} from '../styles'
 export default function Languages() {
     return (
         <Services>
+            <Laptop>
+            <img src={laptop} alt="Laptop image"/>
+            </Laptop>
             <Description>
                 <h2>Some of the <span>languages</span> I work with</h2>
                 <Cards>
@@ -44,15 +47,13 @@ export default function Languages() {
                     </Card>
                 </Cards>
             </Description>
-            <Laptop>
-            <img src={laptop} alt="Laptop image"/>
-            </Laptop>
         </Services>
     )
 }
 
 //
 const Services = styled(About)`
+
 h2{
     padding-bottom: 5rem;
 
@@ -66,6 +67,8 @@ p{
 const Cards = styled.div`
 display: flex;
 flex-wrap: wrap;
+margin-left: 15rem;
+width: 30vw
 `
 const Card = styled.div`
 flex-basis: 15rem;
