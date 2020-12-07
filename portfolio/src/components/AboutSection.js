@@ -1,7 +1,7 @@
 import React from 'react'
 import code from '../images/code.svg'
-//styles
-import styled from 'styled-components'
+//styles imported
+import {About, Description, Image, Hide} from '../styles'
 
 export default function AboutSection() {
     return (
@@ -29,32 +29,6 @@ export default function AboutSection() {
     )
 }
 
-//Styled component
 
-const About = styled.div`
-min-height: 90vh;
-display: flex;
-align-items: center;
-justify-content: space-around;
-padding: 5rem 10rem;
-color: white;
-`
-const Description = styled.div`
-flex: 1;
-padding-right: 5rem;
-h2{
-    font-weight: lighter;
-}
-`
-const Image = styled.div`
-flex:1;
-img{
-width: 100%;
-height: 80vh;
 
-}
-`
 
-const Hide = styled.div`
-overflow: hidden;
-`
