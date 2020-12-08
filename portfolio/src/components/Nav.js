@@ -1,14 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
+//import from react router dom to allow linking to pages
+import {Link} from 'react-router-dom'
 
 export default function Nav() {
     return (
         <StyledNav>
-            <h1><a href="#">Jamie Tardi</a></h1>
+            <h1><Link to="/">Jamie Tardi</Link></h1>
             <ul>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">My Work</a></li>
-                <li><a href="#">Contact Me</a></li>
+                {/* replace a tags with link and to */}
+                <li><Link to="/">About Me</Link></li>
+                <li><Link to="/projects">My Work</Link></li>
+                <li><Link to="/contact-me">Contact Me</Link></li>
 
             </ul>
         </StyledNav>
@@ -28,6 +31,13 @@ a{
     text-decoration: none;
     color: white;
     cursor: pointer;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: all 1.0s ease;
+    &:hover{
+        background: #00D261
+
+    }
 }
 ul{
     list-style-type: none;
@@ -43,5 +53,6 @@ h1 > a{
     font-family: 'Lobster', cursive;
     font-size: 1.3rem;
     font-weight: lighter;
+    
 }
 `

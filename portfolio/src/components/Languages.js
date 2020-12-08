@@ -68,10 +68,11 @@ const Cards = styled.div`
 display: flex;
 flex-wrap: wrap;
 margin-left: 15rem;
-width: 30vw
+width: 30vw;
+gap: 2rem
 `
 const Card = styled.div`
-flex-basis: 15rem;
+flex-basis: 1rem;
 .icon{
     display: flex;
     align-items: center;

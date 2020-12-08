@@ -47,8 +47,9 @@ h2{
         font-size: 2rem;
     }
 span{
-    font-weight: bold;
+    font-weight: 1000;
     color: #00D261;
+    
 }
 
 a{
