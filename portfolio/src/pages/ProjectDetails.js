@@ -3,7 +3,7 @@ import {useHistory} from 'react-router-dom'
 import styled from 'styled-components'
 import { ProjectState } from '../ProjectState'
 import gitHub from '../icons/github.svg'
-import netlify from '../images/netlify.jpg'
+import netlify from '../images/netlify.svg'
 
 
 export default function ProjectDetails() {
@@ -30,7 +30,7 @@ export default function ProjectDetails() {
         <ImageAndText>
         <p><a href={project.gitHub} target="_blank">Link to the Project Code <img src={gitHub} alt="Github Link"/></a></p>
     <img src={project.mainPic} alt={project.altBlurb}/>
-     <p><a href={project.projectLink} target="_blank">Link to the live project </a></p> 
+     <p><a href={project.projectLink} target="_blank">Link to the live project <img src={netlify} alt="Netlify Link"/> </a></p> 
      </ImageAndText>      
         </ProjectDetailsStyled>
         )}
@@ -71,6 +71,7 @@ a {
 cursor: pointer;
 text-decoration: none;
 color: #cccccc;
+position: absolute;
 
 img{
     width: 100px;
