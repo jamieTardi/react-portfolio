@@ -6,17 +6,24 @@ import Nav from './components/Nav'
 import Projects from '../src/pages/Projects'
 import ContactUs from '../src/pages/ContactUs'
 //React router imports
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, useLocation } from 'react-router-dom'
 import ProjectDetails from './pages/ProjectDetails'
+//Animation page transtions imports.
+import {AnimatePresence} from 'framer-motion'
 
 function App() {
   
+  const location = useLocation();
+  console.log(location)
+
   return (
     <div className="App">
       <GlobalStyle />
       <Nav />
       {/* using react router to define pages. */}
-      <Switch>
+      <AnimatePresence exitBeforeEnter>
+        {/* the location is for framer */}
+      <Switch location={location} key={location.pathname}>
       {/* the exact is import as the renders this exact page */}
       <Route path="/" exact>
      <AboutUs />
@@ -31,6 +38,7 @@ function App() {
      <ContactUs />
      </Route>
      </Switch>
+     </AnimatePresence>
     </div>
   );
 }

@@ -4,6 +4,9 @@ import styled from 'styled-components'
 import { ProjectState } from '../ProjectState'
 import gitHub from '../icons/github.svg'
 import netlify from '../images/netlify.svg'
+//framer import
+import { motion } from 'framer-motion'
+import { pageAnimation } from '../animation'
 
 
 export default function ProjectDetails() {
@@ -11,7 +14,8 @@ export default function ProjectDetails() {
     const url = history.location.pathname
     const [projects, setProjects] = useState(ProjectState)
     const [project, setProject] = useState(null)
-   console.log(history)
+    
+
 
     useEffect(() => {
         const currentProject = projects.filter((ProjectObject) => ProjectObject.url === url)
@@ -22,7 +26,7 @@ export default function ProjectDetails() {
     return (
         <>
         {project && (
-        <ProjectDetailsStyled>
+        <ProjectDetailsStyled variants={pageAnimation} initial="hidden" animate="show" exit="exit" >
             <Headline>
     <h2>{project.title}</h2>
     </Headline>
@@ -38,7 +42,7 @@ export default function ProjectDetails() {
     )
 }
 
-const ProjectDetailsStyled = styled.div`
+const ProjectDetailsStyled = styled(motion.div)`
 padding: 5rem 5rem;
 display: flex;
 flex-direction: column;
@@ -66,6 +70,8 @@ p{
     width: 20vw;
 height: 20vh;
 position: relative;
+font-size: 0.4rem;
+line-height: 1rem;
 }
 a {
 cursor: pointer;

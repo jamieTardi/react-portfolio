@@ -7,10 +7,13 @@ import styled from 'styled-components'
 import quizzicle from '../images/quizzicle.png'
 import todoPic from '../images/todo-react.png'
 import musicApp from '../images/music-app.png'
+//framer
+import {motion} from 'framer-motion';
+import { pageAnimation } from '../animation'
 
 export default function Projects() {
     return (
-        <StyledProjects>
+        <StyledProjects variants={pageAnimation} initial="hidden" animate="show" exit="exit">
             <ProjectApp>
                 <h2>Project 1</h2>
                 <div className="line"></div>
@@ -37,7 +40,7 @@ export default function Projects() {
     )       
 }
 
-const StyledProjects = styled.div`
+const StyledProjects = styled(motion.div)`
 min-height: 100vh;
 overflow: hidden;
 padding: 5rem 10rem

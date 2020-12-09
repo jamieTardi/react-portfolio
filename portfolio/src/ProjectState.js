@@ -1,4 +1,3 @@
-import React from 'react'
 import quizzicle from './images/quizzicle.png'
 import quizzicle2 from './images/quizzicle2.png'
 import todoPic from './images/todo-react.png'
