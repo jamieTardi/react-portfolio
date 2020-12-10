@@ -14,7 +14,6 @@ import {AnimatePresence} from 'framer-motion'
 function App() {
   
   const location = useLocation();
-  console.log(location)
 
   return (
     <div className="App">
@@ -26,7 +25,7 @@ function App() {
       <Switch location={location} key={location.pathname}>
       {/* the exact is import as the renders this exact page */}
       <Route path="/" exact>
-     <AboutUs />
+      <AboutUs />
      </Route>
      <Route path="/projects" exact>
      <Projects/>
