@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 import {About} from '../styles'
 import Toggle from '../components/Toggle'
+import {AnimateSharedLayout} from 'framer-motion'
 
 export default function FaqSection() {
 
@@ -10,42 +11,28 @@ export default function FaqSection() {
             <h2>Frequently Asked
                 <span>Questions</span>
             </h2>
-            <Toggle>
-                <div className="question">
-                    <h4>How do I get in Contact?</h4>
+            <AnimateSharedLayout>
+            <Toggle title="How do I get in Contact?">
                     <div className="answer">
                         <p>Email or phone is the best method</p>
-                    </div>
-                    <div className="faq-line"></div>
-                </div>
+                    </div>               
             </Toggle>
-            <Toggle>
-                <div className="question">
-                    <h4>Where are you located?</h4>
+            <Toggle title="Where are you located?">
                     <div className="answer">
                         <p>Newbury, Berkshire</p>
                     </div>
-                    <div className="faq-line"></div>
-                </div>
             </Toggle>
-            <Toggle>
-                <div className="question">
-                    <h4>Can you design mobile first applications?</h4>
+            <Toggle title="Can you design mobile first applications?">
                     <div className="answer">
                         <p>Yes I sure can! Using react native or Java</p>
-                    </div>
-                    <div className="faq-line"></div>
-                </div>
+                    </div>               
             </Toggle>
-            <Toggle>
-                <div className="question">
-                    <h4>When are you avalible?</h4>
+            <Toggle title="Can you design mobile first applications?">
                     <div className="answer">
                         <p>I am avalible for hire immediatly</p>
-                    </div>
-                    <div className="faq-line"></div>
-                </div>
+                    </div>                
             </Toggle>
+            </AnimateSharedLayout>
         </Faq>
     )
 }

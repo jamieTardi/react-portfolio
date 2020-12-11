@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
+import {motion} from 'framer-motion'
+
 //reusable toggle function
 
 //children is the children from the compoenet so the actual question.
-export default function Toggle({children}) {
-    const [toggle, setToggle] = useState(true)
+export default function Toggle({children , title}) {
+    const [toggle, setToggle] = useState(false)
     return (
-        <div onClick={() => setToggle(!toggle)}>
-            {toggle ? children : <button>Frequently Asked Question</button> }
-        </div>
+        <motion.div layout onClick={() => setToggle(prev => !prev)}>
+            <motion.h4 layout className="question">{title}</motion.h4>
+            {toggle ? children : ""}
+            <div className="faq-line"></div>
+        </motion.div>
     )
 }
