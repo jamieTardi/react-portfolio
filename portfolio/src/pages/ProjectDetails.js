@@ -21,7 +21,7 @@ export default function ProjectDetails() {
         const currentProject = projects.filter((ProjectObject) => ProjectObject.url === url)
         setProject(currentProject[0])
     }, [projects, url])
-    console.log(project)
+    
     
     return (
         <>
