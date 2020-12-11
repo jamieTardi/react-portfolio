@@ -7,10 +7,13 @@ import laptop from '../images/laptop.svg'
 import styled from 'styled-components'
 //style import
 import {About, Description, Image, Hide} from '../styles'
+import {scrollReveal} from '../animation'
+import {UseScroll} from '../components/UseScroll'
 
 export default function Languages() {
+const [element, controls] = UseScroll()
     return (
-        <Services>
+        <Services variants={scrollReveal} animate={controls} initial="hidden" ref={element}>
             <Laptop>
             <img src={laptop} alt="Laptop image"/>
             </Laptop>
