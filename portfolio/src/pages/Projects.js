@@ -35,7 +35,7 @@ export default function Projects() {
                             src={musicApp}
                             alt="A music Player made in react"/>
                             
-                            <p>This is a music player that has a working library built in React. Click the picture to see more</p>
+                            <motion.p>This is a music player that has a working library built in React. Click the picture to see more</motion.p>
                     </Hide>
                 </Link>
             </ProjectApp>
@@ -49,7 +49,7 @@ export default function Projects() {
                             src={portfolio}
                             alt="Jamie Tardi Portfolio"/>
                             
-                            <p>This is my professional portfolio using various NPM packages.</p>
+                            <motion.p>This is my professional portfolio using various NPM packages.</motion.p>
                     </Hide>
                 </Link>
             </ProjectApp>
@@ -61,7 +61,7 @@ export default function Projects() {
                         variants={photoAnim}
                         src={quizzicle}
                         alt="A Quiz app built using a RESTful API"/>
-                        <p>A quiz app built using a restful API and built in react.</p>
+                        <motion.p>A quiz app built using a restful API and built in react.</motion.p>
                 </Link>
             </ProjectApp>
             <ProjectApp>
@@ -69,7 +69,7 @@ export default function Projects() {
                 <motion.div className="line"></motion.div>
                 <Link to="/projects/todo">
                     <motion.img variants={photoAnim} src={todoPic} alt="A todo app made in React"/>
-                    <p>The classic to do list written in React</p>
+                    <motion.p>The classic to do list written in React</motion.p>
                 </Link>
             </ProjectApp>
 
