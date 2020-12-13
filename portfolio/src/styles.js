@@ -27,8 +27,9 @@ flex:1;
 img{
 width: 100%;
 height: 80vh;
-
-
+}
+@media(max-width: 600px){
+    display: none;
 }
 `
 

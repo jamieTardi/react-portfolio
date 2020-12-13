@@ -32,7 +32,7 @@ export default function AboutSection() {
                 <motion.button variants={fade} className="contact-button"><Link to="/contact-me">Contact me</Link></motion.button>
             </Description>
             <Image>
-                <motion.img variants={photoAnim} src={code}  alt="Random Image"/>
+                <motion.img variants={photoAnim} src={code}  alt="Jamie the dev"/>
             </Image>
             <Wave />
         </About>

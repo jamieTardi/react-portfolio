@@ -44,8 +44,8 @@ export const ProjectState = () => {
             mainPic: portfolio,
             altBlurb: "Portfolio",
             secondImg: portfolio,
-            gitHub: 'https://github.com/jamieTardi/aaPortfolio',
-            projectLink: 'https://heuristic-benz-d8f6ae.netlify.app',
+            gitHub: 'https://github.com/jamieTardi/react-portfolio',
+            projectLink: 'https://stupefied-bose-b813d7.netlify.app',
             url: '/projects/portfolio',
             projectInfo: "My Profesional portfolio made in react JavaScript to show case some of the features of react."
         }
