@@ -83,9 +83,13 @@ overflow: hidden;
 padding: 5rem 10rem;
 @media(max-width: 600px){
     padding: 1rem 1rem;
+    h2{
+        font-size: 2rem;
+    }
 }
 h2{
     color: white;
+    
 }
 `
 
@@ -98,6 +102,9 @@ p{
 
 const ProjectApp = styled.div `
 padding-bottom: 10rem;
+@media(max-width: 500px){
+    padding-bottom: 1rem;
+}
 .line{
 height: 0.5rem;
 background: #00D261;
@@ -106,7 +113,11 @@ margin-bottom: 3rem
 img{
     width: 100%;
     height: 70vh;
-    object-fit: cover
+    object-fit: contain;
+    @media(max-width: 500px){
+        height: 40vh;
+    }
+    
 }
 `
 

@@ -27,12 +27,12 @@ export default function FaqSection() {
             </Toggle>
             <Toggle title="Can you design mobile first applications?">
                     <div className="answer">
-                        <p>Yes I sure can! Using react native or Java</p>
+                        <p>Yes I sure can! Using react native or Java as well as using the latest Web Technologies.</p>
                     </div>               
             </Toggle>
             <Toggle title="When are you avalible for hire?">
                     <div className="answer">
-                        <p>I am avalible for hire immediatly</p>
+                        <p>Contact me for my current availability.</p>
                     </div>                
             </Toggle>
             </AnimateSharedLayout>

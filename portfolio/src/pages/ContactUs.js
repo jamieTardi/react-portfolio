@@ -38,7 +38,7 @@ const ContactStyle = styled(motion.div)`
 padding: 5rem 10rem;
 color: #353535;
 min-height: 90vh;
-@media(max-width: 400px){
+@media(max-width: 600px){
     padding: 1rem;
 }
 .line{

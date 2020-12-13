@@ -19,10 +19,10 @@ export default function AboutSection() {
             <Description>
                 <motion.div>
                     <Hide>
-                        <motion.h2 variants={titleAnim} ><span>Hello.</span> My name is Jamie</motion.h2>
+                        <motion.h2 variants={titleAnim} ><span>Hello.</span> My name is Jamie<span>.</span></motion.h2>
                     </Hide>
                     <Hide>
-                        <motion.h2 variants={titleAnim}>I specialize in front-end engineering. </motion.h2>
+                        <motion.h2 variants={titleAnim}>I specialize in front-end engineering<span>.</span> </motion.h2>
                     </Hide>
                     <Hide>
                         <motion.h2 variants={titleAnim}>Take a look at my work<span>.</span></motion.h2>
