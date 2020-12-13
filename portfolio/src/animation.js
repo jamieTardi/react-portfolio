@@ -12,7 +12,7 @@ export const pageAnimation = {
         transition: {
             duration: 1,
             when: 'beforeChildren',
-            staggerChildren: 0.25
+            staggerChildren: 0.50
             
         }
     },
@@ -26,6 +26,15 @@ export const pageAnimation = {
         
     }
 
+}
+
+export const paragraphTrans = {
+    hidden: { opacity: 0, y: 300 },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 1 }
+    }
 }
 
 export const titleAnim = {

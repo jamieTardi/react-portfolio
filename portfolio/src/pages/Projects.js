@@ -10,7 +10,7 @@ import musicApp from '../images/music-app.png'
 import portfolio from '../images/portfolioPic.png'
 //framer
 import {motion} from 'framer-motion';
-import {pageAnimation, titleAnim, fade, photoAnim, projectLineAnim, slider, sliderContainer} from '../animation'
+import {pageAnimation, titleAnim, fade, photoAnim, projectLineAnim, slider, sliderContainer, paragraphTrans} from '../animation'
 
 export default function Projects() {
     return (
@@ -30,12 +30,14 @@ export default function Projects() {
                 <motion.div variants={projectLineAnim} className="line"></motion.div>
                 <Link to="/projects/music-player">
                     <Hide>
+                        
                         <motion.img
                             variants={photoAnim}
                             src={musicApp}
                             alt="A music Player made in react"/>
                             
-                            <motion.p>This is a music player that has a working library built in React. Click the picture to see more</motion.p>
+                            <motion.p variants={paragraphTrans}>This is a music player that has a working library built in React. Click the picture to see more</motion.p>
+                            
                     </Hide>
                 </Link>
             </ProjectApp>
