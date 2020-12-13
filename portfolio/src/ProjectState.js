@@ -4,6 +4,7 @@ import todoPic from './images/todo-react.png'
 import musicApp from './images/music-app.png'
 import musicApp2 from './images/music-app2.png'
 import todoPic2 from './images/todo2.png'
+import portfolio from './images/portfolioPic.png'
 
 //Exporting just the object so no need for default
 export const ProjectState = () => {
@@ -37,6 +38,16 @@ export const ProjectState = () => {
             projectLink: 'https://heuristic-benz-d8f6ae.netlify.app',
             url: '/projects/todo',
             projectInfo: "This to-do created in react.js was my first react project to demonstrate the use of state and to have a user friendly UI."
+        },
+        {
+            title: "Portfolio made in react",
+            mainPic: portfolio,
+            altBlurb: "Portfolio",
+            secondImg: portfolio,
+            gitHub: 'https://github.com/jamieTardi/aaPortfolio',
+            projectLink: 'https://heuristic-benz-d8f6ae.netlify.app',
+            url: '/projects/portfolio',
+            projectInfo: "My Profesional portfolio made in react JavaScript to show case some of the features of react."
         }
     ]
 }

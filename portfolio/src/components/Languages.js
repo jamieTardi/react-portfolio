@@ -1,12 +1,15 @@
 import React from 'react'
+//Icons Imports
 import javaIcon from '../icons/javaIcon.svg'
 import javascriptIcon from '../icons/javascriptIcon.svg'
 import pythonIcon from '../icons/pythonIcon.svg'
 import reactIcon from '../icons/reactIcon.svg'
+import sass from '../icons/sass.svg'
 import laptop from '../images/laptop.svg'
-import styled from 'styled-components'
+import nodeIcon from '../icons/nodeIcon.svg'
 //style import
-import {About, Description, Image, Hide} from '../styles'
+import styled from 'styled-components'
+import {About, Description, Image} from '../styles'
 import {scrollReveal} from '../animation'
 import {UseScroll} from '../components/UseScroll'
 
@@ -48,6 +51,20 @@ const [element, controls] = UseScroll()
                         </div>
                         <p className="React-blurb">The most used framework for Javascript</p>
                     </Card>
+                    <Card>
+                        <div className="icon">
+                            <img src={sass} alt="Sass icon" className="svg-icon"/>
+                            <h3>Sass</h3>
+                        </div>
+                        <p className="React-blurb">Css framework Sass for making easy to use stylesheets</p>
+                    </Card>
+                    <Card>
+                        <div className="icon">
+                            <img src={nodeIcon} alt="Node icon" className="svg-icon"/>
+                            <h3>Node.js</h3>
+                        </div>
+                        <p className="React-blurb">Backend written in JavaScript</p>
+                    </Card>
                 </Cards>
             </Description>
         </Services>
@@ -72,7 +89,12 @@ display: flex;
 flex-wrap: wrap;
 margin-left: 15rem;
 width: 30vw;
-gap: 2rem
+gap: 2rem;
+
+@media (max-width: 600px){
+    margin-left: 1rem;
+}
+
 `
 const Card = styled.div`
 flex-basis: 1rem;
@@ -90,5 +112,9 @@ flex-basis: 1rem;
 `
 
 const Laptop = styled(Image)`
-width: 90%
+width: 60%;
+@media (max-width: 600px){
+    display: none;
+}
+
 `

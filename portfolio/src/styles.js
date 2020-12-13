@@ -8,6 +8,12 @@ align-items: center;
 justify-content: space-around;
 padding: 5rem 5rem;
 color: white;
+@media (max-width: 600px){
+    padding: 5rem 4rem;
+    h2{
+        font-size: 2rem;
+    }
+}
 `
 export const Description = styled.div`
 flex: 1;
@@ -21,6 +27,7 @@ flex:1;
 img{
 width: 100%;
 height: 80vh;
+
 
 }
 `

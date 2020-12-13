@@ -7,6 +7,7 @@ import styled from 'styled-components'
 import quizzicle from '../images/quizzicle.png'
 import todoPic from '../images/todo-react.png'
 import musicApp from '../images/music-app.png'
+import portfolio from '../images/portfolioPic.png'
 //framer
 import {motion} from 'framer-motion';
 import {pageAnimation, titleAnim, fade, photoAnim, projectLineAnim, slider, sliderContainer} from '../animation'
@@ -24,9 +25,8 @@ export default function Projects() {
                 <Frame3 variants={slider}></Frame3>
                 <Frame4 variants={slider}></Frame4>
                 </motion.div>
-
             <ProjectApp>
-                <motion.h2 variants={fade}>Project 1</motion.h2>
+                <motion.h2 variants={fade}>Music Player made in React</motion.h2>
                 <motion.div variants={projectLineAnim} className="line"></motion.div>
                 <Link to="/projects/music-player">
                     <Hide>
@@ -34,24 +34,42 @@ export default function Projects() {
                             variants={photoAnim}
                             src={musicApp}
                             alt="A music Player made in react"/>
+                            
+                            <p>This is a music player that has a working library built in React. Click the picture to see more</p>
                     </Hide>
                 </Link>
             </ProjectApp>
             <ProjectApp>
-                <motion.h2>Project 2</motion.h2>
+                <motion.h2 variants={fade}>This Portfolio made in React</motion.h2>
+                <motion.div variants={projectLineAnim} className="line"></motion.div>
+                <Link to="/projects/portfolio">
+                    <Hide>
+                        <motion.img
+                            variants={photoAnim}
+                            src={portfolio}
+                            alt="Jamie Tardi Portfolio"/>
+                            
+                            <p>This is my professional portfolio using various NPM packages.</p>
+                    </Hide>
+                </Link>
+            </ProjectApp>
+            <ProjectApp>
+                <motion.h2>Quiz App</motion.h2>
                 <motion.div className="line"></motion.div>
                 <Link to="/projects/quizzicle">
                     <motion.img
                         variants={photoAnim}
                         src={quizzicle}
                         alt="A Quiz app built using a RESTful API"/>
+                        <p>A quiz app built using a restful API and built in react.</p>
                 </Link>
             </ProjectApp>
             <ProjectApp>
-                <motion.h2>Project 1</motion.h2>
+                <motion.h2>Classic To Do List</motion.h2>
                 <motion.div className="line"></motion.div>
                 <Link to="/projects/todo">
                     <motion.img variants={photoAnim} src={todoPic} alt="A todo app made in React"/>
+                    <p>The classic to do list written in React</p>
                 </Link>
             </ProjectApp>
 
@@ -62,11 +80,20 @@ export default function Projects() {
 const StyledProjects = styled(motion.div)`
 min-height: 100vh;
 overflow: hidden;
-padding: 5rem 10rem
+padding: 5rem 10rem;
+@media(max-width: 600px){
+    padding: 1rem 1rem;
+}
+h2{
+    color: white;
+}
 `
 
 const Hide = styled.div `
 overflow: hidden;
+p{
+    text-decoration: none;
+}
 `
 
 const ProjectApp = styled.div `

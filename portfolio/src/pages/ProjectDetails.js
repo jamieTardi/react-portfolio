@@ -32,9 +32,9 @@ export default function ProjectDetails() {
     </Headline>
         <p>{project.projectInfo}</p>
         <ImageAndText>
-        <p><a href={project.gitHub} target="_blank">Link to the Project Code <img src={gitHub} alt="Github Link"/></a></p>
-    <img src={project.mainPic} alt={project.altBlurb}/>
-     <p><a href={project.projectLink} target="_blank">Link to the live project <img src={netlify} alt="Netlify Link"/> </a></p> 
+        <p className="gitHubClass"><a href={project.gitHub} target="_blank">Link to the Project Code <img src={gitHub} className="githubProjectImg" alt="Github Link"/></a></p>
+    <img className="mainImg" src={project.mainPic} alt={project.altBlurb}/>
+     <p className="netlifyClass"><a href={project.projectLink} target="_blank">Link to the live project <img src={netlify} className="netlifyImg" alt="Netlify Link"/> </a></p> 
      </ImageAndText>      
         </ProjectDetailsStyled>
         )}
@@ -53,6 +53,16 @@ img{
     max-width: 50vw;
     min-height: 50vh;
     padding: 0rem 1rem;  
+    @media(max-width: 600px){
+        min-height: 10%;
+    }
+    
+}
+
+.mainImg{
+    @media(max-width: 600px){
+        display: none;
+    }
 }
 h2{
     color: #cccccc
@@ -64,6 +74,11 @@ h2{
 `
 const ImageAndText = styled.div`
 display: flex;
+@media(max-width: 600px){
+    flex-direction: column;
+}
+
+
 p{
     display: flex;
     justify-content: center;
@@ -72,12 +87,35 @@ height: 20vh;
 position: relative;
 font-size: 0.4rem;
 line-height: 1rem;
+
 }
+
 a {
 cursor: pointer;
 text-decoration: none;
 color: #cccccc;
 position: absolute;
+@media(max-width: 600px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+        :first-child{
+            margin-right: 3rem;
+        }
+    }
+    @media(max-width: 400px){
+        a:nth-child(2){
+            margin-left: 3rem;
+        }
+    }
+.netlifyImg{
+    @media(max-width: 600px){
+        top:11%;
+        left: -5%
+    }
+}
 
 img{
     width: 100px;
@@ -85,12 +123,29 @@ img{
     position: absolute;
     top: -30%;
     left: 30%;
+    @media(max-width: 600px){
+        position: relative;
+       
+    }
     &:hover{
         opacity: 0.7;
     }
     
+    
 }
 }
+
+.githubProjectImg{
+    @media(max-width: 600px){
+        left: -10%;
+        top: -10%;
+    }
+    @media(max-width: 400px){
+        left: -10%;
+        top: -10%;
+    }
+}
+
 `
 
 const Headline = styled.div`

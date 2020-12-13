@@ -6,6 +6,7 @@ import {About, Description, Image, Hide} from '../styles'
 import {motion} from 'framer-motion'
 import {titleAnim, fade, photoAnim} from '../animation'
 import Wave from './Wave';
+import {Link} from 'react-router-dom'
 
 export default function AboutSection() {
 //framer motion variable "variant"
@@ -21,14 +22,14 @@ export default function AboutSection() {
                         <motion.h2 variants={titleAnim} ><span>Hello.</span> My name is Jamie</motion.h2>
                     </Hide>
                     <Hide>
-                        <motion.h2 variants={titleAnim}>I am a front-end engineer</motion.h2>
+                        <motion.h2 variants={titleAnim}>I specialize in front-end engineering. </motion.h2>
                     </Hide>
                     <Hide>
-                        <motion.h2 variants={titleAnim}>Take a look at my work</motion.h2>
+                        <motion.h2 variants={titleAnim}>Take a look at my work<span>.</span></motion.h2>
                     </Hide>
                 </motion.div>
                 <motion.p variants={fade} className="contact-paragraph">Contact me below!</motion.p>
-                <motion.button variants={fade} className="contact-button">Contact me</motion.button>
+                <motion.button variants={fade} className="contact-button"><Link to="/contact-me">Contact me</Link></motion.button>
             </Description>
             <Image>
                 <motion.img variants={photoAnim} src={code}  alt="Random Image"/>

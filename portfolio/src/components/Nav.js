@@ -27,6 +27,7 @@ align-items: center;
 justify-content: space-between;
 padding: 1rem 10rem;
 background: hsl(210, 10%, 33%);
+
 a{
     text-decoration: none;
     color: white;
@@ -55,4 +56,26 @@ h1 > a{
     font-weight: lighter;
     
 }
+@media (max-width: 1000px){
+    ul{
+        gap: 1rem;
+    }
+    li{
+        display: flex;
+    }
+    h1 > a{
+        display: flex;
+    }
+    
+}
+
+@media (max-width: 600px){
+   justify-content: flex-start;
+   padding: 1rem 5rem
+}
+
+@media (max-width: 500px){
+    padding: 1rem 0.3rem;
+}
+
 `

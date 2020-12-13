@@ -13,7 +13,7 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-button{
+button, .inputBtn{
     font-weight: bold;
     font-size: 1.1rem;
     cursor: pointer;
@@ -53,7 +53,9 @@ span{
 }
 
 a{
-    font-size: 1.1rem
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: white;
 }
 
 .svg-icon{
