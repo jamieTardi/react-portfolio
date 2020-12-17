@@ -5,8 +5,12 @@ import styled from 'styled-components'
 import Toggle from '../components/Toggle'
 import contactImg from '../images/contactImg.svg'
 import gitHub from '../icons/github.svg'
+import { useForm } from '@formspree/react';
+import Form from '../components/Form'
 
 export default function ContactUs() {
+    function SignupForm() {
+        const [state, handleSubmit] = useForm('signupForm');}
     return (
         <ContactStyle variants={pageAnimation} initial="hidden" animate="show" exit="exit">
             <Title>
@@ -15,17 +19,11 @@ export default function ContactUs() {
                     <motion.div variants={projectLineAnim} className="line"></motion.div>
                 </Hide>
             </Title>
+            
             <ImageFormContainer>
             <ImageStyled src={contactImg} alt="Contact Image"/>
-          <FormStyled action="https://formspree.io/f/xqkgyyva" method="POST">
-
-              <label htmlFor="Name">Name:</label>
-              <InputStyled type="text"/>
-              <label htmlFor="Email">Email:</label>
-              <InputStyled type="email"/>
-              <TextareaStyled name="Message" id="" cols="30" rows="10" placeholder="Write a message"/>
-              <input className="inputBtn" type="submit" value="Send"/>
-          </FormStyled>
+            <Form/>
+         
           </ImageFormContainer>
           <SocialContainer>
           <ImgLink href="https://github.com/jamieTardi" target="_blank"><GitHubImg src={gitHub} alt="github"/></ImgLink>
@@ -69,42 +67,9 @@ h2{
     margin-left: 2rem
 }
 
-
 `
 
-const Circle = styled.div`
-border-radius: 50%;
-min-width: 3rem;
-height: 3rem;
-background: #4C545D;
 
-`
-
-const LinkStyled = styled.a`
-text-decoration: none;
-color: white;
-`
-
-const FormStyled = styled.form`
-display: flex;
-flex-direction: column;
-color: white;
-max-width: 50%;
-@media (max-width: 800px){
-    min-width: 100%;
-}
-`
-
-const InputStyled = styled.input`
-margin-bottom: 1rem;
-font-size: 1.2rem;
-margin-top: 0.3rem;
-`
-
-const TextareaStyled = styled.textarea`
-margin-bottom: 1rem;
-font-family: 'Montserrat', sans-serif;
-`
 
 const ImageStyled = styled.img`
 width: 50%;

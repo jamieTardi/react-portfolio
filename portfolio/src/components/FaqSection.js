@@ -17,12 +17,13 @@ export default function FaqSection() {
             <AnimateSharedLayout>
             <Toggle title="How do I get in Contact?">
                     <div className="answer">
-                        <p>Email or phone is the best method</p>
+                        <p>Email: jamie.tardi@gmail.com</p>
+                        <p>Phone: 07557990224</p>
                     </div>               
             </Toggle>
             <Toggle title="Where are you located?">
                     <div className="answer">
-                        <p>Newbury, Berkshire</p>
+                        <p>Newbury, Berkshire. I am able to work fully remote.</p>
                     </div>
             </Toggle>
             <Toggle title="Can you design mobile first applications?">

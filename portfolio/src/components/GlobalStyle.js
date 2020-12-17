@@ -62,6 +62,18 @@ a{
     width: 4rem;
     height: 4rem;
 }
+
+form{
+    
+display: flex;
+flex-direction: column;
+gap: 1rem;
+width: 40vw;
+@media (max-width: 800px){
+    width: 90vw
+}
+
+}
 `
 
 export default GlobalStyle

@@ -23,26 +23,13 @@ const [element, controls] = UseScroll()
             <Description>
                 <h2>Some of the <span>languages</span> I work with</h2>
                 <Cards>
-                    <Card>
-                        <div className="icon">
-                            <img src={javaIcon} alt="Java icon" className="svg-icon"/>
-                            <h3>Java</h3>
-                        </div>
-                        <p className="java-blurb">For responsive mobile applications</p>
-                    </Card>
+                   
                     <Card>
                         <div className="icon">
                             <img src={javascriptIcon} alt="Javascript icon" className="svg-icon"/>
                             <h3>Javascript</h3>
                         </div>
                         <p className="javascript-blurb">The webs most used programming language</p>
-                    </Card>
-                    <Card>
-                        <div className="icon">
-                            <img src={pythonIcon} alt="python icon" className="svg-icon"/>
-                            <h3>Python</h3>
-                        </div>
-                        <p className="python-blurb">The worlds most versatile language</p>
                     </Card>
                     <Card>
                         <div className="icon">
@@ -53,10 +40,10 @@ const [element, controls] = UseScroll()
                     </Card>
                     <Card>
                         <div className="icon">
-                            <img src={sass} alt="Sass icon" className="svg-icon"/>
-                            <h3>Sass</h3>
+                            <img src={pythonIcon} alt="python icon" className="svg-icon"/>
+                            <h3>Python</h3>
                         </div>
-                        <p className="React-blurb">Css framework Sass for making easy to use stylesheets</p>
+                        <p className="python-blurb">The worlds most versatile language</p>
                     </Card>
                     <Card>
                         <div className="icon">
@@ -64,6 +51,20 @@ const [element, controls] = UseScroll()
                             <h3>Node.js</h3>
                         </div>
                         <p className="React-blurb">Backend written in JavaScript</p>
+                    </Card>
+                    <Card>
+                        <div className="icon">
+                            <img src={sass} alt="Sass icon" className="svg-icon"/>
+                            <h3>Sass</h3>
+                        </div>
+                        <p className="React-blurb">Css framework Sass for making easy to use stylesheets</p>
+                    </Card>
+                    <Card>
+                        <div className="icon">
+                            <img src={javaIcon} alt="Java icon" className="svg-icon"/>
+                            <h3>Java</h3>
+                        </div>
+                        <p className="java-blurb">For responsive mobile applications</p>
                     </Card>
                 </Cards>
             </Description>
