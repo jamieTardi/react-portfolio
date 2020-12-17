@@ -28,7 +28,6 @@ export default function AboutSection() {
                         <motion.h2 variants={titleAnim}>Take a look at my work<span>.</span></motion.h2>
                     </Hide>
                 </motion.div>
-                <motion.p variants={fade} className="contact-paragraph">Contact me below!</motion.p>
                 <motion.button variants={fade} className="contact-button"><Link to="/contact-me">Contact me</Link></motion.button>
             </Description>
             <Image>

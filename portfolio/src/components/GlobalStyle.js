@@ -53,7 +53,9 @@ span{
 }
 .MuiButton-label{
     color: black;
+
 }
+
 
 a{
     font-size: 1.1rem;

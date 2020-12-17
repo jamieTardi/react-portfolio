@@ -29,42 +29,42 @@ const [element, controls] = UseScroll()
                             <img src={javascriptIcon} alt="Javascript icon" className="svg-icon"/>
                             <h3>Javascript</h3>
                         </div>
-                        <p className="javascript-blurb">The webs most used programming language</p>
+                        <p className="javascript-blurb">The webs most used programming language, designed to add functionality and useability to webpages. </p>
                     </Card>
                     <Card>
                         <div className="icon">
                             <img src={reactIcon} alt="React icon" className="svg-icon"/>
                             <h3>React.js</h3>
                         </div>
-                        <p className="React-blurb">The most used framework for Javascript</p>
+                        <p className="React-blurb">A powerful Javascript framework, designed with the scope to create scalable projects. </p>
                     </Card>
                     <Card>
                         <div className="icon">
                             <img src={pythonIcon} alt="python icon" className="svg-icon"/>
                             <h3>Python</h3>
                         </div>
-                        <p className="python-blurb">The worlds most versatile language</p>
+                        <p className="python-blurb">The worlds most versatile language.</p>
                     </Card>
                     <Card>
                         <div className="icon">
                             <img src={nodeIcon} alt="Node icon" className="svg-icon"/>
                             <h3>Node.js</h3>
                         </div>
-                        <p className="React-blurb">Backend written in JavaScript</p>
+                        <p className="React-blurb">Server side JavaScript, to bring additional functionality.</p>
                     </Card>
                     <Card>
                         <div className="icon">
                             <img src={sass} alt="Sass icon" className="svg-icon"/>
                             <h3>Sass</h3>
                         </div>
-                        <p className="React-blurb">Css framework Sass for making easy to use stylesheets</p>
+                        <p className="React-blurb">Css framework Sass for making easy to use stylesheets.</p>
                     </Card>
                     <Card>
                         <div className="icon">
                             <img src={javaIcon} alt="Java icon" className="svg-icon"/>
                             <h3>Java</h3>
                         </div>
-                        <p className="java-blurb">For responsive mobile applications</p>
+                        <p className="java-blurb">For responsive mobile applications.</p>
                     </Card>
                 </Cards>
             </Description>

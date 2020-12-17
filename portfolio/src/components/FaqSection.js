@@ -23,12 +23,12 @@ export default function FaqSection() {
             </Toggle>
             <Toggle title="Where are you located?">
                     <div className="answer">
-                        <p>Newbury, Berkshire. I am able to work fully remote.</p>
+                        <p>Newbury, Berkshire. With the ability to work fully remote if required.</p>
                     </div>
             </Toggle>
             <Toggle title="Can you design mobile first applications?">
                     <div className="answer">
-                        <p>Yes I sure can! Using react native or Java as well as using the latest Web Technologies.</p>
+                        <p>Using powerful mobile technologies such as SASS media queries and material UI libraries creating mobile friendly designs is my priority.</p>
                     </div>               
             </Toggle>
             <Toggle title="When are you avalible for hire?">
