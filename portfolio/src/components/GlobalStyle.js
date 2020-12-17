@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
 body{
     background: #343a40;
     font-family: 'Montserrat', sans-serif;
+    width: 100vw;
 }
 
 button, .inputBtn{
@@ -27,6 +28,10 @@ button, .inputBtn{
         color: white;
     }
    
+}
+
+.contact-button{
+    margin-top: 3rem;
 }
 h2{
         font-weight: lighter;

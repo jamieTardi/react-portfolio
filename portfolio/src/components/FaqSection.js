@@ -12,7 +12,7 @@ export default function FaqSection() {
     return (
         <Faq variants={scrollReveal} animate={controls} initial="hidden" ref={element}>
             <h2>Frequently Asked
-                <span>Questions</span>
+                Questions
             </h2>
             <AnimateSharedLayout>
             <Toggle title="How do I get in Contact?">
