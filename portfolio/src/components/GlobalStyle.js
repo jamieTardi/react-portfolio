@@ -51,6 +51,9 @@ span{
     color: #00D261;
     
 }
+.MuiButton-label{
+    color: black;
+}
 
 a{
     font-size: 1.1rem;
@@ -63,14 +66,19 @@ a{
     height: 4rem;
 }
 
+
 form{
     
 display: flex;
 flex-direction: column;
-gap: 1rem;
 width: 40vw;
+height: fit-content;
+gap: 1rem;
+
 @media (max-width: 800px){
-    width: 90vw
+    width: 90vw;
+
+    
 }
 
 }

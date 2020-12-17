@@ -1,7 +1,8 @@
 import React from 'react'
 import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
-import {TextField, InputBase} from '@material-ui/core';
+import {TextField, Button} from '@material-ui/core';
+import { spacing } from '@material-ui/system';
 import green from '@material-ui/core/colors/green';
 import styled from 'styled-components'
 
@@ -9,15 +10,28 @@ import styled from 'styled-components'
 
 const useStyles = makeStyles({
     root: {
+        
         primary:{
-            main: '#000000'
+            main: '#000000',
+            
         },
         
+        
+        
     },
+    button:{
+        background: '#00D261',
+        color: '#ffffff',
+        '&:hover': {
+            backgroundColor: 'hsl(148 100% 21%)',}
+
+    },
+   
     textField: {
         backgroundColor: 'inherit',
         border: 'none',
-        borderRadius: '5px'  
+        borderRadius: '5px',
+        marginBottom: '0.5rem'
         
     },
     input: {
@@ -39,13 +53,22 @@ const useStyles = makeStyles({
 const theme = createMuiTheme({
     palette: {
         primary:{
-            main: '#00D261'
+            main: '#00D261',
+            color: '#fffffff'
         },
         secondary: {
             // This is green.A700 as hex.
             main: '#ffffff',
           },
-    }
+          overrides: {
+            MuiButton: {
+              raisedPrimary: {
+                color: 'white',
+              },
+            },
+          }
+    },
+   
 })
 
 
@@ -57,6 +80,7 @@ export default function Form() {
         <form className={classes.root} noValidate autoComplete="off">
         <TextField
           id="outlined-password-input"
+          mb={2}
           label="Name"
           type="text"
           autoComplete="current-password"
@@ -79,6 +103,7 @@ export default function Form() {
          }}
         />
         <TextField
+        m="3rem"
           id="outlined-password-input"
           label="Email"
           InputLabelProps={{
@@ -121,6 +146,7 @@ export default function Form() {
              }
         }}
         />
+        <Button className={classes.button} variant="outlined">Submit</Button>
 
         </form>
             
