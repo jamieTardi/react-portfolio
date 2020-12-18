@@ -1,10 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import {TextField, Button} from '@material-ui/core';
 import { spacing } from '@material-ui/system';
 import green from '@material-ui/core/colors/green';
 import styled from 'styled-components'
+import axios from 'axios'
 
 
 
@@ -75,16 +76,77 @@ const theme = createMuiTheme({
 
 export default function Form() {
     const classes = useStyles()
+    const [status, setStatus] = useState({
+      submitted: false,
+      submitting: false,
+      info: { error: false, msg: null }
+    })
+    const [inputs, setInputs] = useState({
+      email: '',
+      message: ''
+    })
+    const handleServerResponse = (ok, msg) => {
+      if (ok) {
+        setStatus({
+          submitted: true,
+          submitting: false,
+          info: { error: false, msg: msg }
+        })
+        setInputs({
+          email: '',
+          message: ''
+        })
+      } else {
+        setStatus({
+          info: { error: true, msg: msg }
+        })
+      }
+    }
+    const handleOnChange = e => {
+      e.persist()
+      setInputs(prev => ({
+        ...prev,
+        [e.target.id]: e.target.value
+      }))
+      setStatus({
+        submitted: false,
+        submitting: false,
+        info: { error: false, msg: null }
+      })
+    }
+    const handleOnSubmit = e => {
+      e.preventDefault()
+      setStatus(prevStatus => ({ ...prevStatus, submitting: true }))
+      axios({
+        method: 'POST',
+        url: 'https://formspree.io/f/xqkgyyva',
+        data: inputs
+      })
+        .then(response => {
+          handleServerResponse(
+            true,
+            'Thank you, your message has been submitted.'
+          )
+        })
+        .catch(error => {
+          handleServerResponse(false, error.response.data.error)
+        })
+      }
     return (
         <ThemeProvider theme={theme}>
-        <form className={classes.root} noValidate autoComplete="off">
+        <form className={classes.root} noValidate autoComplete="off" onSubmit={handleOnSubmit}>
         <TextField
-          id="outlined-password-input"
-          mb={2}
+          
           label="Name"
+          id="name"
+          name="name"
+          onChange={handleOnChange}
+          required
+          htmlFor="name"
           type="text"
           autoComplete="current-password"
           variant="outlined"
+          value={inputs.name}
           className={classes.textField}
           color="primary"
           autoFocus="true"
@@ -103,9 +165,14 @@ export default function Form() {
          }}
         />
         <TextField
-        m="3rem"
-          id="outlined-password-input"
+          id="email"
+          htmlFor="email"
           label="Email"
+          name="email"
+          required
+          onChange={handleOnChange}
+          type="email"
+          value={inputs.email}
           InputLabelProps={{
             style: { color: '#fff' },
           }}
@@ -125,8 +192,12 @@ export default function Form() {
         }}
         />
          <TextField
-          id="outlined-password-input"
+          id="message"
           label="Message"
+          htmlFor="message"
+          onChange={handleOnChange}
+          required
+          value={inputs.message}
           InputLabelProps={{
             style: { color: '#fff' },
           }}
@@ -146,7 +217,9 @@ export default function Form() {
              }
         }}
         />
-        <Button className={classes.button} variant="outlined">Submit</Button>
+        <Button className={classes.button} type="submit" disabled={status.submitting} variant="outlined">
+          {!status.submitting ? !status.submitted ? 'Submit' : 'Submitted' : 'Submitting...'}
+          </Button>
 
         </form>
             

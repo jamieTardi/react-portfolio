@@ -1,33 +1,40 @@
 import React from 'react';
-import { motion } from 'framer-motion'
-import { pageAnimation, titleAnim, projectLineAnim } from '../animation'
+import {motion} from 'framer-motion'
+import {pageAnimation, titleAnim, projectLineAnim} from '../animation'
 import styled from 'styled-components'
-import Toggle from '../components/Toggle'
 import contactImg from '../images/contactImg.svg'
 import gitHub from '../icons/github.svg'
-import { useForm } from '@formspree/react';
+import {useForm} from '@formspree/react';
 import Form from '../components/Form'
+import {FormspreeProvider} from '@formspree/react'
 
 export default function ContactUs() {
     function SignupForm() {
-        const [state, handleSubmit] = useForm('signupForm');}
+        const [state,
+            handleSubmit] = useForm('signupForm');
+    }
     return (
-        <ContactStyle variants={pageAnimation} initial="hidden" animate="show" exit="exit">
+        <ContactStyle
+            variants={pageAnimation}
+            initial="hidden"
+            animate="show"
+            exit="exit">
             <Title>
                 <Hide>
                     <motion.h2 variants={titleAnim}>Contact me</motion.h2>
                     <motion.div variants={projectLineAnim} className="line"></motion.div>
                 </Hide>
             </Title>
-            
+
             <ImageFormContainer>
-            <ImageStyled src={contactImg} alt="Contact Image"/>
-            <Form/>
-         
-          </ImageFormContainer>
-          <SocialContainer>
-          <ImgLink href="https://github.com/jamieTardi" target="_blank"><GitHubImg src={gitHub} alt="github"/></ImgLink>
-          </SocialContainer>
+                <ImageStyled src={contactImg} alt="Contact Image"/>
+               
+                    <Form/>
+               
+            </ImageFormContainer>
+            <SocialContainer>
+                <ImgLink href="https://github.com/jamieTardi" target="_blank"><GitHubImg src={gitHub} alt="github"/></ImgLink>
+            </SocialContainer>
         </ContactStyle>
     )
 }
@@ -69,29 +76,27 @@ h2{
 
 `
 
-
-
-const ImageStyled = styled.img`
+const ImageStyled = styled.img `
 width: 50%;
 @media (max-width: 800px){
     display: none;
 }
 `
 
-const ImageFormContainer = styled.div`
+const ImageFormContainer = styled.div `
 display: flex;
 flex-direction: row-reverse;
 justify-content: space-between;
 gap: 1rem;
 `
 
-const GitHubImg = styled.img`
+const GitHubImg = styled.img `
 width: 10vw;
 height: 10vh;
 cursor: pointer;
 `
 
-const SocialContainer = styled.div`
+const SocialContainer = styled.div `
 width: 100%;
 height: 100%;
 display: flex;
@@ -100,7 +105,7 @@ align-items: center;
 margin-top: 1rem;
 `
 
-const ImgLink = styled.a`
+const ImgLink = styled.a `
 width: 10vw;
 height: 10vh;
 display: flex;
