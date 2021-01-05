@@ -2,9 +2,6 @@ import React, {useState} from 'react'
 import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import {TextField, Button} from '@material-ui/core';
-import { spacing } from '@material-ui/system';
-import green from '@material-ui/core/colors/green';
-import styled from 'styled-components'
 import axios from 'axios'
 
 
@@ -134,6 +131,7 @@ export default function Form() {
       }
     return (
         <ThemeProvider theme={theme}>
+          
         <form className={classes.root} noValidate autoComplete="off" onSubmit={handleOnSubmit}>
         <TextField
           
@@ -217,11 +215,13 @@ export default function Form() {
              }
         }}
         />
+         <h2 style={{color: 'white'}}>{!status.submitting ? !status.submitted ? '' : 'Form Submitted!' : 'Form is currently Submitting!'}</h2>
         <Button className={classes.button} type="submit" disabled={status.submitting} variant="outlined">
           {!status.submitting ? !status.submitted ? 'Submit' : 'Submitted' : 'Submitting...'}
           </Button>
-
+         
         </form>
+        
             
         </ThemeProvider>
     )

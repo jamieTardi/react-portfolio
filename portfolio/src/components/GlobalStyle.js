@@ -7,11 +7,19 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    overflow-x: hidden;
+
+}
 
 body{
     background: #343a40;
     font-family: 'Montserrat', sans-serif;
     width: 100vw;
+    @media (max-width: 600px){
+        width: 100vw;
+        overflow: hidden;
+    }
 }
 
 button, .inputBtn{

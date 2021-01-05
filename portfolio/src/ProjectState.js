@@ -5,6 +5,7 @@ import musicApp from './images/music-app.png'
 import musicApp2 from './images/music-app2.png'
 import todoPic2 from './images/todo2.png'
 import portfolio from './images/portfolioPic.png'
+import colorApp from './images/ColorApp.png'
 
 //Exporting just the object so no need for default
 export const ProjectState = () => {
@@ -48,7 +49,17 @@ export const ProjectState = () => {
             projectLink: 'https://stupefied-bose-b813d7.netlify.app',
             url: '/projects/portfolio',
             projectInfo: "My Profesional portfolio made in react JavaScript to show case some of the features of react."
-        }
+        },
+        {
+            title: "A colour picking App made in standard JavaScript",
+            mainPic: colorApp,
+            altBlurb: "Color app",
+            secondImg: "",
+            gitHub: 'https://github.com/jamieTardi/color-app',
+            projectLink: 'https://suspicious-pasteur-da738f.netlify.app/',
+            url: '/projects/colour-app',
+            projectInfo: "This colour picking app helps choose a colour for designing web pages, it has a feature to save colours and copy to clipboard."
+        },
     ]
 }
 

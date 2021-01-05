@@ -8,6 +8,7 @@ import quizzicle from '../images/quizzicle.png'
 import todoPic from '../images/todo-react.png'
 import musicApp from '../images/music-app.png'
 import portfolio from '../images/portfolioPic.png'
+import colorApp from '../images/ColorApp.png'
 //framer
 import {motion} from 'framer-motion';
 import {pageAnimation, titleAnim, fade, photoAnim, projectLineAnim, slider, sliderContainer, paragraphTrans} from '../animation'
@@ -53,6 +54,17 @@ export default function Projects() {
                             
                             <motion.p>This is my professional portfolio using various NPM packages.</motion.p>
                     </Hide>
+                </Link>
+            </ProjectApp>
+            <ProjectApp>
+                <motion.h2>Colour picking app</motion.h2>
+                <motion.div className="line"></motion.div>
+                <Link to="/projects/colour-app">
+                    <motion.img
+                        variants={photoAnim}
+                        src={colorApp}
+                        alt="A Colour picking app"/>
+                        <motion.p>A colour picking app made in standard JavaScript</motion.p>
                 </Link>
             </ProjectApp>
             <ProjectApp>

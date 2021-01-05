@@ -10,6 +10,7 @@ justify-content: space-around;
 padding: 5rem 5rem;
 color: white;
 @media (max-width: 600px){
+    overflow: hidden;
     padding: 5rem 4rem;
     h2{
         font-size: 2rem;

@@ -6,7 +6,7 @@ import contactImg from '../images/contactImg.svg'
 import gitHub from '../icons/github.svg'
 import {useForm} from '@formspree/react';
 import Form from '../components/Form'
-import {FormspreeProvider} from '@formspree/react'
+
 
 export default function ContactUs() {
     function SignupForm() {
