@@ -9,6 +9,7 @@ import todoPic from '../images/todo-react.png'
 import musicApp from '../images/music-app.png'
 import portfolio from '../images/portfolioPic.png'
 import colorApp from '../images/ColorApp.png'
+import blulago from '../images/blulagoPic.png'
 //framer
 import {motion} from 'framer-motion';
 import {pageAnimation, titleAnim, fade, photoAnim, projectLineAnim, slider, sliderContainer, paragraphTrans} from '../animation'
@@ -26,6 +27,22 @@ export default function Projects() {
                 <Frame3 variants={slider}></Frame3>
                 <Frame4 variants={slider}></Frame4>
                 </motion.div>
+                <ProjectApp>
+                <motion.h2 variants={fade}>A e-commerce site Built in react using Stripe payments.</motion.h2>
+                <motion.div variants={projectLineAnim} className="line"></motion.div>
+                <Link to="/projects/blulago">
+                    <Hide>
+                        
+                        <motion.img
+                            variants={photoAnim}
+                            src={blulago}
+                            alt="Fishing website"/>
+                            
+                            <motion.p variants={paragraphTrans}>A fully working e commerce site built for a client in react.</motion.p>
+                            
+                    </Hide>
+                </Link>
+            </ProjectApp>
             <ProjectApp>
                 <motion.h2 variants={fade}>Music Player made in React</motion.h2>
                 <motion.div variants={projectLineAnim} className="line"></motion.div>

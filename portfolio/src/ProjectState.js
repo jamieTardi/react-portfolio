@@ -6,10 +6,21 @@ import musicApp2 from './images/music-app2.png'
 import todoPic2 from './images/todo2.png'
 import portfolio from './images/portfolioPic.png'
 import colorApp from './images/ColorApp.png'
+import blulago from './images/blulagoPic.png'
 
 //Exporting just the object so no need for default
 export const ProjectState = () => {
     return [
+        {
+            title: "A fully working E commerce Site built for a customer",
+            mainPic: blulago,
+            altBlurb: "Blulago",
+            secondImg: "",
+            gitHub: 'https://github.com/jamieTardi/blulago-react',
+            projectLink: 'https://www.blulagofishing.co.uk/',
+            url: '/projects/blulago',
+            projectInfo: "This is a fully working E commerce Site built for a client, it is simple yet elegant. The customer is very happy and has commisioned two more sites."
+        },
         {
             title: "Quiz App Made in React",
             mainPic: quizzicle,
