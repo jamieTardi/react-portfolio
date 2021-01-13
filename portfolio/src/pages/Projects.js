@@ -10,9 +10,10 @@ import musicApp from '../images/music-app.png'
 import portfolio from '../images/portfolioPic.png'
 import colorApp from '../images/ColorApp.png'
 import blulago from '../images/blulagoPic.png'
+import coronavirusApp from '../images/coronavirus-app.png'
 //framer
 import {motion} from 'framer-motion';
-import {pageAnimation, titleAnim, fade, photoAnim, projectLineAnim, slider, sliderContainer, paragraphTrans} from '../animation'
+import {pageAnimation,fade, photoAnim, projectLineAnim, slider, sliderContainer, paragraphTrans} from '../animation'
 
 export default function Projects() {
     return (
@@ -36,9 +37,23 @@ export default function Projects() {
                         <motion.img
                             variants={photoAnim}
                             src={blulago}
-                            alt="Fishing website"/>
-                            
+                            alt="Fishing website"/>                      
                             <motion.p variants={paragraphTrans}>A fully working e commerce site built for a client in react.</motion.p>
+                            
+                    </Hide>
+                </Link>
+            </ProjectApp>
+            <ProjectApp>
+                <motion.h2 variants={fade}>A covid-19 tracking application built in react using chart.js and RESTful apis.</motion.h2>
+                <motion.div variants={projectLineAnim} className="line"></motion.div>
+                <Link to="/projects/coronavirus">
+                    <Hide>
+                        
+                        <motion.img
+                            variants={photoAnim}
+                            src={coronavirusApp}
+                            alt="Corona App"/>                      
+                            <motion.p variants={paragraphTrans}>A live updating application that tracks the worldwide pandemic.</motion.p>
                             
                     </Hide>
                 </Link>

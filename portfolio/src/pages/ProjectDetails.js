@@ -20,7 +20,7 @@ export default function ProjectDetails() {
     useEffect(() => {
         const currentProject = projects.filter((ProjectObject) => ProjectObject.url === url)
         setProject(currentProject[0])
-    }, [projects, url])
+    }, [url])
     
     
     return (
@@ -32,9 +32,9 @@ export default function ProjectDetails() {
     </Headline>
         <p>{project.projectInfo}</p>
         <ImageAndText>
-        <p className="gitHubClass"><a href={project.gitHub} target="_blank">Link to the Project Code <img src={gitHub} className="githubProjectImg" alt="Github Link"/></a></p>
+        <p className="gitHubClass"><a href={project.gitHub} target="_blank" rel="noreferrer">Link to the Project Code <img src={gitHub} className="githubProjectImg" alt="Github Link"/></a></p>
     <img className="mainImg" src={project.mainPic} alt={project.altBlurb}/>
-     <p className="netlifyClass"><a href={project.projectLink} target="_blank">Link to the live project <img src={netlify} className="netlifyImg" alt="Netlify Link"/> </a></p> 
+     <p className="netlifyClass"><a href={project.projectLink} target="_blank" rel="noreferrer">Link to the live project <img src={netlify} className="netlifyImg" alt="Netlify Link"/> </a></p> 
      </ImageAndText>      
         </ProjectDetailsStyled>
         )}

@@ -7,10 +7,21 @@ import todoPic2 from './images/todo2.png'
 import portfolio from './images/portfolioPic.png'
 import colorApp from './images/ColorApp.png'
 import blulago from './images/blulagoPic.png'
+import coronavirusApp2 from './images/coronavirus-app2.png'
 
 //Exporting just the object so no need for default
 export const ProjectState = () => {
     return [
+        {
+            title: "A Covid-19 tracking app that logs stats using charts",
+            mainPic: coronavirusApp2,
+            altBlurb: "Covid-19",
+            secondImg: "",
+            gitHub: 'https://github.com/jamieTardi/corona-map',
+            projectLink: 'https://coronavirus-graph-app.netlify.app/',
+            url: '/projects/coronavirus',
+            projectInfo: "This app tracks data from the covid-19 pandemic using the chartJS library and Axios. Built in react.js"
+        },
         {
             title: "A fully working E commerce Site built for a customer",
             mainPic: blulago,
